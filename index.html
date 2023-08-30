@@ -34,7 +34,7 @@
             display: flex;
             align-items: center;
             margin: 0;
-            margin-left: 1000spx; /* Adjust the margin-left to move the logo further to the left */
+            margin-left: 10px;
             font-size: 24px;
         }
 
@@ -61,11 +61,16 @@
             background-color: #f0f0f0;
             padding: 20px;
             text-align: center;
+            display: none; /* Hide the update box by default */
+        }
+
+        body.home .update-box {
+            display: block; /* Show the update box only on the home page */
         }
     </style>
-    <title>Blazepixel</title>
+    <title>Blazepixel - Your Minecraft Server</title>
 </head>
-<body>
+<body class="home"> <!-- Add the 'home' class to the body on the home page -->
     <header>
         <div class="header-content">
             <h1 class="server-name">
