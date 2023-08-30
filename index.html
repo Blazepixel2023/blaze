@@ -19,8 +19,8 @@
 
         .header-content {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column; /* Change flex direction to column */
+            align-items: center; /* Center align horizontally */
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
@@ -28,13 +28,13 @@
 
         .logo {
             width: 50px;
+            margin-bottom: 10px; /* Add margin to create space between logo and text */
         }
 
         .server-name {
             display: flex;
             align-items: center;
             margin: 0;
-            margin-left: 20px; /* Increase the margin to create more spacing */
             font-size: 24px;
         }
 
@@ -81,16 +81,13 @@
 <body>
     <header>
         <div class="header-content">
+            <img class="logo" src="server-icon.png" alt="Logo">
             <h1 class="server-name">
-                <img class="logo" src="server-icon.png" alt="Logo">
                 Blazepixel
             </h1>
             <nav class="nav-links">
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#forums">Forums</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
@@ -104,7 +101,7 @@
 
     <div class="about-box">
         <h2>About Us</h2>
-        <p>Welcome to Blazepixel, your unparalleled gateway to boundless Minecraft adventures! 
+        <p>Welcome to Blazepixel, your unparalleled gateway to boundless Minecraft adventures!
             Our fervor for all things Minecraft is truly unmatched, and we're thrilled to share this passion with you...</p>
         <!-- Add more content about your server or organization -->
     </div>
