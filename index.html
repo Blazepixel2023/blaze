@@ -61,33 +61,11 @@
             background-color: #f0f0f0;
             padding: 20px;
             text-align: center;
-            display: none; /* Hide the update box by default */
-        }
-
-        body.home .update-box {
-            display: block; /* Show the update box only on the home page */
-        }
-
-        .chat-box {
-            background-color: #f0f0f0;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .chat-container {
-            border: 1px solid #ccc;
-            padding: 10px;
-            max-height: 200px;
-            overflow-y: scroll;
-        }
-
-        .chat-input {
-            margin-top: 10px;
         }
     </style>
     <title>Blazepixel - Your Minecraft Server</title>
 </head>
-<body class="home"> <!-- Add the 'home' class to the body on the home page -->
+<body>
     <header>
         <div class="header-content">
             <h1 class="server-name">
@@ -108,31 +86,8 @@
     <div class="update-box">
         <h2>Updates Coming Soon!</h2>
         <p>Stay tuned for exciting new updates to our Minecraft server.</p>
+        <p>Join our Discord server for discussions and updates: <a href="https://discord.gg/wXSz7weFvJ" target="_blank">https://discord.gg/wXSz7weFvJ</a></p>
     </div>
-
-    <div class="chat-box">
-        <h2>Chat</h2>
-        <div class="chat-container" id="chatContainer">
-            <!-- Chat messages will be displayed here -->
-        </div>
-        <input type="text" class="chat-input" id="chatInput" placeholder="Type your message...">
-        <button onclick="sendMessage()">Send</button>
-    </div>
-
-    <script>
-        function sendMessage() {
-            var inputElement = document.getElementById("chatInput");
-            var message = inputElement.value.trim();
-            if (message !== "") {
-                var chatContainer = document.getElementById("chatContainer");
-                var newMessage = document.createElement("p");
-                newMessage.textContent = message;
-                chatContainer.appendChild(newMessage);
-                inputElement.value = "";
-                chatContainer.scrollTop = chatContainer.scrollHeight; // Scroll to the bottom of the chat
-            }
-        }
-    </script>
 
     <!-- Rest of your website content goes here -->
 
